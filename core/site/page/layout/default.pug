@@ -1,23 +1,14 @@
 doctype html
 html
   head
-    script(src='https://unpkg.com/jquery@3.1.0/dist/jquery.min.js')
-    script(src='https://unpkg.com/react@15.3.0/dist/react.js')
-    script(src='https://unpkg.com/react-dom@15.3.0/dist/react-dom.js')
-    script(src='https://unpkg.com/babel-standalone@6.15.0/babel.min.js')
-    script(src='https://unpkg.com/remarkable@1.6.2/dist/remarkable.min.js')
-    script(src='/data/lib/native.history.js')
-
-    link(rel='stylesheet', href='/data/build/css/general.min.css')
-    link(rel='stylesheet', href='/data/build/css/base.min.css')
-    link(rel='stylesheet', href='/data/build/css/text.min.css')
-    script(src='/data/build/js/script.min.js')
-
+    script(src='/data/lib/head.load.min.js', data-headjs-load='/data/build/js/main.min.js')
     title !{title}
   body
     #loading-screen
     #full-screen(style='display:none')
-      a.header(href='/') WorldArcana
+      a.header(href='/')
+        img(src='/data/img/icon.png', height='100px', width='100px')
+        p Axiom
 
       //ul.nav
       //  each menulink in menulinks
@@ -29,4 +20,4 @@ html
           !=content
       #page-hidden(style='display:none')
 
-    script(src='/data/build/apps/WorldBuilder/main.min.js')
+    
